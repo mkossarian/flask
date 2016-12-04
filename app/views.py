@@ -3,6 +3,9 @@ from app import app
 
 @app.route('/')
 @app.route('/index')
+@app.route('/feed')
+@app.route('/data')
+@app.route('/calendar')
 def index():
     user = {'nickname': 'Zeke'} #this is zeke
     posts = [
@@ -19,3 +22,8 @@ def index():
                            title='Home',
                            user=user,
                            posts=posts)
+def data():
+    user = {'nickname': 'hayden'} 
+    return render_template('data.html',
+                           title='Home',
+                           user=user)
