@@ -32,6 +32,9 @@ def feed():
 @app.route('/calendar')
 
 @app.route('/index')
+@app.route('/feed')
+@app.route('/data')
+@app.route('/calendar')
 def index():
     user = {'nickname': 'Zeke'} #this is zeke
     posts = [
@@ -48,7 +51,6 @@ def index():
                            title='Home',
                            user=user,
                            posts=posts)
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
