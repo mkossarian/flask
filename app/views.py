@@ -10,18 +10,26 @@ def feed():
     posts = [
         {
             'author': {'nickname': 'Bob'},
+            'group': {'cause': 'Healthcare Reform', 'circle': 'Give Shots'},
+            'time': '4 October 2016',
             'body': 'i am going to send my children to school one day'
         },
         {
             'author': {'nickname': 'Bill'},
+            'group': {'cause': 'No More Science', 'circle': 'Use Up all the textbooks with Oragami'},
+            'time': '30 January 2014',
             'body': 'i like to do machine learning and this can use machine learning'
         },
         {
             'author': {'nickname': 'Bryan'},
+            'group': {'cause': 'Healthcare Reform', 'circle': 'Give Shots'},
+            'time': '6 July 2014',
             'body': 'the frontend of this is cool like stuff i do'
         },
         {
             'author': {'nickname': 'Bryn'},
+            'group': {'cause': 'Healthcare Reform', 'circle': 'Give Shots'},
+            'time': '18 August 2016',
             'body': 'this is a great tool that i like'
         }
     ]

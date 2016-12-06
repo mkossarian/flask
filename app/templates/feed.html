@@ -1,7 +1,17 @@
 {% extends "base.html" %}
+
 {% block content %}
     <h1>Dude, it's {{ user.nickname }}</h1>
     {% for post in posts %}
-    <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
+    <div>
+      <p>{{ post.author.nickname }} says: <b>{{ post.body }}</b>
+      <a href="/data">Data</a>
+      {% if post.group %}
+        <em>Posted in {{ post.group.circle }} for {{ post.group.cause }}</em></p>
+      {% endif %}
+      {% if post.time %}
+	<em>{{ post.time }}</em>
+      {% endif %}
+    </div>
     {% endfor %}
 {% endblock %}
