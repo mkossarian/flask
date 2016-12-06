@@ -37,7 +37,12 @@ def feed():
                            title='Home',
                            user=user,
                            posts=posts)
-@app.route('/calendar')
+
+@app.route('/user/<username>')
+def profile(username):
+    return render_template('user.html',
+                           title='User',
+                           username=username)
 
 @app.route('/index')
 def index():
